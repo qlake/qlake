@@ -8,7 +8,16 @@
 
 New Generation PHP Framework
 
+## Download And Installation
+
+For download and install the Qlake framework by composer, use this commant in your terminal
+
+```cmd
+composer create-project qlake/qlake=dev
+```
+
 ## Documentation
+
 Documentation will be creating soon as soon. 
 
 ## License
