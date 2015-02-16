@@ -1,8 +1,8 @@
 <?php
 
-use Framework\Support\Autoload;
+use Qlake\Support\Autoload;
 
-require __DIR__ . '/../../vendor/Framework/Support/Autoload.php';
+//require __DIR__ . '/../vendor/Qlake/Support/Autoload.php';
 
 $paths = [
 	__DIR__ . '/../' . 'controllers',

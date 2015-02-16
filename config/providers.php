@@ -10,7 +10,7 @@
  */
 App::singleton('router', function($app)
 {
-	return new Framework\Routing\Router;
+	return new Qlake\Routing\Router;
 });
 
 /**
@@ -18,7 +18,7 @@ App::singleton('router', function($app)
  */
 App::singleton('request', function($app)
 {
-	return new Framework\Http\Request;
+	return new Qlake\Http\Request;
 });
 
 /**
@@ -26,7 +26,7 @@ App::singleton('request', function($app)
  */
 App::bind('view', function($app)
 {
-	$view = new Framework\View\View;
+	$view = new Qlake\View\View;
 
 	$view->setPaths([__DIR__ . '/../views']);
 
@@ -40,7 +40,7 @@ App::singleton('config', function($app)
 {
 	$defaultPath = __DIR__;
 
-	$config = new Framework\Config\Config();
+	$config = new Qlake\Config\Config();
 
 	$config->setDefaultPath($defaultPath);
 
@@ -52,13 +52,13 @@ App::singleton('config', function($app)
  */
 App::bind('db', function($app)
 {
-	$cf = new Framework\Database\Connection\ConnectionFactory(Config::get('database'));
+	$cf = new Qlake\Database\Connection\ConnectionFactory(Config::get('database'));
 
 	$connector = $cf->createConnector();
 
 	$connection = $connector->createConnection();
 
-	return new Framework\Database\Query($connection, new Framework\Database\Grammar\MysqlGrammar);
+	return new Qlake\Database\Query($connection, new Qlake\Database\Grammar\MysqlGrammar);
 });
 
 
@@ -68,11 +68,11 @@ App::bind('db', function($app)
 App::singleton('cache', function($app)
 {
 	$driverName = Config::get('cache.driver');
-	$className = "Framework\\Cache\\".ucfirst($driverName)."Cache";
+	$className = "Qlake\\Cache\\".ucfirst($driverName)."Cache";
 	$driver = new $className;
 	$cfgDrivers = Config::get("cache.drivers");
 	$driver->setConfig($cfgDrivers[$driverName]);
-	$cache = new Framework\Cache\Cache($driver);
+	$cache = new Qlake\Cache\Cache($driver);
 	return $cache;
 });
 
@@ -81,7 +81,7 @@ App::singleton('cache', function($app)
  */
 App::singleton('html', function($app)
 {
-	return new Framework\Html\Html();
+	return new Qlake\Html\Html();
 });
 
 

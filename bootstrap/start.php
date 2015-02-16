@@ -1,6 +1,6 @@
 <?php
 
-use Framework\Application;
+use Qlake\Application;
 
 function trace($var)
 {
@@ -59,7 +59,7 @@ if (!function_exists('getallheaders'))
 
 
 
-require __DIR__ . '/../../vendor/Framework/Application.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 
 $app = new Application();
