@@ -8,6 +8,9 @@
 
 New Generation PHP Framework
 
+## Documentation
+Documentation will be creating soon as soon. 
+
 ## License
 
 The Qlake framework is open-source software licensed under the [MIT License](http://opensource.org/licenses/MIT).
