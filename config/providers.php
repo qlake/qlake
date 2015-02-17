@@ -8,6 +8,26 @@
 /**
  * Register router singleton provider.
  */
+
+Qlake\Architecture\Iwan::setApplication(Qlake\Application::$instance);
+
+class App extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'app';
+}
+
+class Route extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'router';
+}
+
+class View extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'view';
+}
+
+
+
 App::singleton('router', function($app)
 {
 	return new Qlake\Routing\Router;
