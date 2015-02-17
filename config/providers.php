@@ -1,8 +1,8 @@
 <?php
 /**
- * In this file register application`s dependencies.
- * For use of these, just use of $app['provider'].
- * These are lazyload. So high the performance.
+ * In this file register application dependencies.
+ * for use of these, just use of $app['provider'].
+ * these are lazyload. So high the performance.
  */
 
 /**
@@ -28,7 +28,7 @@ App::bind('view', function($app)
 {
 	$view = new Qlake\View\View;
 
-	$view->setPaths([__DIR__ . '/../views']);
+	$view->setPaths([__DIR__ . '/../app/views']);
 
 	return $view;
 });

@@ -1,5 +1,5 @@
 <?php
 
 return [
-	'title' => 'framework',
+	'title' => 'Qlake PHP Framework',
 ];

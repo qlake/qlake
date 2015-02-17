@@ -1,17 +1,8 @@
+AddDefaultCharset UTF-8
+
 <IfModule mod_rewrite.c>
-	<IfModule mod_negotiation.c>
-    	Options -MultiViews
-    </IfModule>
-    #RewriteBase /
-    #DirectorySlash Off
-    RewriteEngine On
-
-    # Redirect Trailing Slashes...
-	#RewriteRule ^(.*)/$ http://localhost/re/$1 [L,R=301]
-    #
-
-	# Handle Front Controller...
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
