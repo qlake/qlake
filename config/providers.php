@@ -88,11 +88,17 @@ App::bind('db', function($app)
 App::singleton('cache', function($app)
 {
 	$driverName = Config::get('cache.driver');
+
 	$className = "Qlake\\Cache\\".ucfirst($driverName)."Cache";
+
 	$driver = new $className;
+
 	$cfgDrivers = Config::get("cache.drivers");
+
 	$driver->setConfig($cfgDrivers[$driverName]);
+	
 	$cache = new Qlake\Cache\Cache($driver);
+
 	return $cache;
 });
 

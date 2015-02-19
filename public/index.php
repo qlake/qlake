@@ -4,14 +4,20 @@
 error_reporting(E_ALL & ~E_NOTICE);
 
 
-require __DIR__ . '/../vendor/autoload.php';
+$autoloader = require __DIR__.'/../bootstrap/autoload.php';
 
 
-require __DIR__ . '/../bootstrap/autoload.php';
+$app = require_once __DIR__.'/../bootstrap/application.php';
 
 
-$app = require __DIR__ . '/../bootstrap/start.php';
+require_once __DIR__.'/../app/routes.php';
 
 
-$app->run();
+$request = Qlake\Http\Request::capture();
+
+$response = $app->handle($request);
+
+//$response->send();
+
+//$app->terminate($request, $response);
 

@@ -1,6 +1,6 @@
 <?php
 
-use Qlake\Application;
+
 
 function trace($var)
 {
@@ -59,17 +59,19 @@ if (!function_exists('getallheaders'))
 
 
 
-require __DIR__ . '/../vendor/autoload.php';
 
 
-$app = new Application();
+
+$app = new Qlake\Application();
+
 
 require __DIR__ . '/../config/providers.php';
+
 
 register_shutdown_function(function()
 {
 	//trace('===' . memory_get_usage()/1024/1024  . '===');
-	//trace(get_included_files());
+	trace(get_included_files());
 });
 
 return $app;
@@ -88,3 +90,5 @@ return $app;
  * php_mbstring.dll
  * mcrypt
  */
+
+
