@@ -71,7 +71,7 @@ require __DIR__ . '/../config/providers.php';
 register_shutdown_function(function()
 {
 	//trace('===' . memory_get_usage()/1024/1024  . '===');
-	trace(get_included_files());
+	//trace(get_included_files());
 });
 
 return $app;
