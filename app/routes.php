@@ -15,5 +15,5 @@ Route::get('/', function()
 {
 	//echo View::render('index');
 
-	IndexController::index();
+	echo IndexController::index();
 });
