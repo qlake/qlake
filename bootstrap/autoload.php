@@ -34,7 +34,7 @@ foreach ($aliases as $key => $value)
 */
 
 
-require __DIR__.'/../vendor/autoload.php';
+return require __DIR__.'/../vendor/autoload.php';
 
 
 

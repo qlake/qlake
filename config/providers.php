@@ -26,6 +26,11 @@ class View extends Qlake\Architecture\Iwan
 	public static $provider = 'view';
 }
 
+class Config extends Qlake\Architecture\Iwan
+{
+	public static $provider = 'config';
+}
+
 
 
 App::singleton('router', function($app)
