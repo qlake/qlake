@@ -14,7 +14,7 @@
 		}
 	],
 	"require": {
-		"qlake/framework": "@dev"
+		"qlake/framework": "0.*@dev"
 	},
 	"autoload": {
 		"files": [
