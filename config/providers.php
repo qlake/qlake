@@ -51,9 +51,9 @@ App::singleton('request', function($app)
  */
 App::bind('view', function($app)
 {
-	$view = new Qlake\View\View;
+	$view = new Qlake\View\View(__DIR__ . '/../app/views');
 
-	$view->setPaths([__DIR__ . '/../app/views']);
+	//$view->setPaths([]);
 
 	return $view;
 });
