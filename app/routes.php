@@ -13,7 +13,5 @@
 
 Route::get('/', function()
 {
-	//echo View::render('index');
-
-	echo IndexController::index();
+	return View::render('index');
 });
