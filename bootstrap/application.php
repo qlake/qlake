@@ -62,7 +62,7 @@ if (!function_exists('getallheaders'))
 
 
 
-$app = new Qlake\Application();
+$app = new Qlake\Architecture\Application();
 
 
 require __DIR__ . '/../config/providers.php';
