@@ -14,7 +14,7 @@
 		}
 	],
 	"require": {
-		"qlake/framework": "0.*@dev"
+		"qlake/framework": "dev-master@dev"
 	},
 	"autoload": {
 		"files": [
@@ -22,5 +22,6 @@
 		"psr-4": {
 			"App\\": "app/"
 		}
-	}
+	},
+	"minimum-stability": "dev"
 }
