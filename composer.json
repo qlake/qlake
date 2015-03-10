@@ -14,7 +14,7 @@
 		}
 	],
 	"require": {
-		"qlake/framework": "0.1.x-dev"
+		"qlake/framework": "dev-master"
 	},
 	"autoload": {
 		"files": [
